@@ -1,5 +1,11 @@
 // Mini projet : Play the game
-// Part 1
+/**
+ * @author : Ezekiel kouassi
+ * @description : Mini projet PlayTheGame
+ * - la première fonction permet de lancer le jeu
+ * - la seconde fonction fait la vérification du nombre entré par l'utilisateur et du
+ * nombre de la machine
+ */
 function playTheGame() {
     let usersAdvice = confirm("Do you like to play the game?");
     if(usersAdvice){
@@ -8,9 +14,9 @@ function playTheGame() {
             alert("Sorry Not a number, Goodbye");
         }
         else if(userNumber < 10 && userNumber >= 0) {
-            let computerNumber = Math.random(0, 10).toFixed(0);
-            compareNumbers(userNumber, computerNumber);
+            let computerNumber = Math.floor(Math.random() *10);
             console.log(computerNumber);
+            compareNumbers(userNumber, computerNumber);
         }
         else {
             alert("Sorry it’s not a good number, Goodbye");
